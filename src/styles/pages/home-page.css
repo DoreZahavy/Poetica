@@ -1,0 +1,14 @@
+.home-page {
+    grid-template-rows: auto 1fr;
+    
+    .home-header {
+        background-color: var(--parchment-beige);
+        color: var(--dark-sepia);
+        width: 100%;
+        height:100px;
+        .logo {
+            width: 40px;
+        }
+    }
+}
+

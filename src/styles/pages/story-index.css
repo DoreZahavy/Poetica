@@ -1,0 +1,40 @@
+.story-index {
+    display: grid;
+    background-color: #fff;
+    grid-template-rows: auto 1fr;
+
+   
+    .wb-header {
+        grid-column: 2;
+        /* background-color: blue; */
+        height: 61px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.25em;
+        font-weight: 600;
+        border-bottom: 1px solid rgba(82, 82, 128, 0.15);
+
+        button {
+            color: white;
+            background-color: #0e72ed;
+            height: 32px;
+            padding-inline: 1em;
+            display: flex;
+            align-items: center;
+            border-radius: 0.5em;
+            /* justify-content: space-between; */
+            svg {
+                width: 1em;
+                height: 1em;
+                margin-inline-end: 0.25em;
+            }
+            span {
+                font-size: 0.875em;
+            }
+        }
+    }
+
+    .wb-list {
+    }
+}

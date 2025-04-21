@@ -1,0 +1,9 @@
+:root {
+    --parchment-beige: #f4e8c8; /* primary bg for txt */
+    --dark-sepia: #3c2f2f; /* text, shadows */
+
+    --forest-green: #2e4f2e; /* bg, accents , main text*/
+    --rich-brown: #5c4033; /* text, borders, btns */
+    --olive-green: #6b8e23; /* hover, highlights */
+    --gold-accent: #d4a017; /* underlines, icons */
+}

@@ -1,0 +1,16 @@
+body {
+
+    font-family: 'Lora', serif;
+    background-color: var(--parchment-beige);
+    color: var(--dark-sepia);
+  }
+  
+  button {
+    background-color: var(--forest-green);
+    color: var(--parchment-beige);
+    border: 1px solid var(--rich-brown);
+  }
+  
+  button:hover {
+    background-color: var(--olive-green);
+  }
