@@ -1,0 +1,19 @@
+[
+    {
+        "_id": "101",
+        "groupName": "101",
+        "coords": {
+            "x": 100,
+            "y": 200
+        },
+        "size": {
+            "width": 100,
+            "height": 200
+        },
+        "name": "Moshe Samuel",
+        "email": "david@gmail.com",
+        "password": "101",
+        "createdAt": 1745252968849,
+        "updatedAt": 1745252968849
+    }
+]

@@ -4,6 +4,22 @@
 
     --forest-green: #2e4f2e; /* bg, accents , main text*/
     --rich-brown: #5c4033; /* text, borders, btns */
-    --olive-green: #6b8e23; /* hover, highlights */
+    --olive-green: #6b8e23; /* hover, highlights maybe remove?? */
+    --sage-green: #556B2F; /* hover, highlights maybe remove?? */
     --gold-accent: #d4a017; /* underlines, icons */
+    --amber-accent: #B8973A; /* underlines, icons */
+    --neutral-gray:#4a4a4a;
 }
+
+
+:root {
+    --forest-green: #2E4F2E; /* Primary dark green for headers or accents */
+    --rich-brown: #5C4033; /* Accent for borders, text, or minor elements */
+    --parchment-beige: #F4E8C8; /* Light background, used sparingly */
+    --sage-green: #556B2F; /* Secondary green for hover or gradient */
+    --dark-sepia: #3C2F2F; /* Primary text, high contrast */
+    --amber-accent: #B8973A; /* Subtle highlight for active states */
+    --neutral-gray: #4A4A4A; /* Utility color for modern balance */
+    --pure-black: #000000; /* Dramatic logo */
+    --muted-beige: #E8D9A8; /* Darker beige for cohesive backgrounds */
+  }

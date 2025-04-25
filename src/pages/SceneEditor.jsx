@@ -1,13 +1,14 @@
 import { useState, useRef, useEffect } from 'react'
-import { wbService } from '../../services/story/index.js'
+import { storyService } from '../services/story/index.js'
 import { useParams } from 'react-router'
 
-import { useResizeCanvas } from '../../hooks/story/useResizeCanvas.js'
-import { useZoomCanvas } from '../../hooks/story/useZoomCanvas.js'
+import { useResizeCanvas } from '../hooks/story/useResizeCanvas.js'
+import { useZoomCanvas } from '../hooks/story/useZoomCanvas.js'
 
-import SceneToolbar from './SceneToolbar.jsx'
-import SceneLeftFooter from './SceneLeftFooter.jsx'
-import SceneRightFooter from './SceneRightFooter.jsx'
+import SceneToolbar from '../cmps/scene-editor/SceneToolbar.jsx'
+import SceneLeftFooter from '../cmps/scene-editor/SceneLeftFooter.jsx'
+import SceneRightFooter from '../cmps/scene-editor/SceneRightFooter.jsx'
+
 
 
 const SceneEditor = () => {
@@ -65,7 +66,7 @@ const SceneEditor = () => {
     }, [])
 
     async function loadWb() {
-        wb.current = await wbService.getById(wbId)
+        wb.current = await storyService.getById(wbId)
         renderLowerCanvas()
     }
 
@@ -147,7 +148,7 @@ const SceneEditor = () => {
             default:
                 break
         }
-        wbService.save(wb.current)
+        storyService.save(wb.current)
 
 
     }
@@ -196,7 +197,7 @@ const SceneEditor = () => {
         upperCtxRef.current.closePath()
         elementToEdit.current.points = transformPoints(elementToEdit.current.points)
         wb.current.elements.push(elementToEdit.current)
-        elementToEdit.current = wbService.getEmptyElement('pen')
+        elementToEdit.current = storyService.getEmptyElement('pen')
         clearUpperCanvas()
         renderLowerCanvas()
     }
@@ -211,7 +212,7 @@ const SceneEditor = () => {
     }
 
     function selectTool(toolName) {
-        elementToEdit.current = wbService.getEmptyElement(toolName)
+        elementToEdit.current = storyService.getEmptyElement(toolName)
         setSelectedTool(toolName)
     }
 
@@ -219,7 +220,7 @@ const SceneEditor = () => {
 
 
     return (
-        <main className='wb-details'>
+        <main className='scene-editor main-layout-content'>
             <section ref={canvasContainerRef} className='canvas-container'>
 
                 <canvas

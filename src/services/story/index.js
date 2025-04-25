@@ -1,16 +1,22 @@
 const { DEV, VITE_LOCAL } = import.meta.env
 
+import { userService } from '../user'
 import { makeId } from '../util.service'
 // import { makeId } from '../util.service'
 
-import { wbService as local } from './story.service.local'
+import { storyService as local } from './story.service.local'
 // import { wbService as remote } from './wb.service.remote'
 
-function getEmptyWb() {
+function getEmptyStory() {
   return {
-    // id: makeId(),
-    owner: 'Moishee',
-    elements: [],
+    // _id: makeId(),
+    title: "Untitled",
+    description: "My story description",
+    thumbnailUrl: "https://marketplace.canva.com/EAFOYxZhUbU/1/0/1600w/canva-black-red-horror-stories-youtube-thumbnail-CCjIPIyyoZ8.jpg",
+    createdAt: Date.now(),
+    updatedAt:  Date.now(),
+    createdBy: userService.getLoggedInUser(),
+    members: []
   }
 }
 
@@ -64,9 +70,9 @@ function getDefaultFilter() {
 
 const service = local
 // const service = VITE_LOCAL === 'true' ? local : remote
-export const wbService = {
+export const storyService = {
   getEmptyElement,
-  getEmptyWb,
+  getEmptyStory,
   getDefaultFilter,
   ...service,
 }
@@ -74,4 +80,4 @@ export const wbService = {
 // Easy access to this service from the dev tools console
 // when using script - dev / dev:local
 
-if (DEV) window.wbService = wbService
+if (DEV) window.storyService = storyService

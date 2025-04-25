@@ -7,6 +7,7 @@ const StoryChars= () => {
 
 
             <span>characters</span>
+            <button className="primary">btnnnn</button>
         </header>
     )
 }

@@ -1,20 +1,21 @@
 /* main layout */
 
-
 .main-layout {
+    height: 100dvh;
     display: grid;
-    grid-template-columns:
-        20px 1fr 20px;
-
-
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "header header"
+        "aside main";
+}
+.main-layout-header {
+    grid-area: header;
+}
+.main-layout-aside {
+    grid-area: aside;
+}
+.main-layout-content {
+    grid-area: main;
 }
 
-
-.main-layout>*:not(.full) {
-    grid-column: 2;
-}
-
-
-.main-layout>.full {
-    grid-column: 1 / -1;
-}

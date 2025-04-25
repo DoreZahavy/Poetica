@@ -1,0 +1,13 @@
+[
+
+    {
+        "_id":"101",
+        "imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png",
+        "name":"Moshe Samuel",
+        "email":"david@gmail.com",
+        "password":"101",
+        "createdAt":1745252968849,
+        "updatedAt":1745252968849
+        
+    }
+]

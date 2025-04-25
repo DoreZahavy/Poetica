@@ -1,14 +1,15 @@
 import { store } from './store/store.js'
 import { Provider } from 'react-redux'
 import { Route, BrowserRouter as Router, Routes, useLocation } from 'react-router-dom'
-import StoryDetails from './pages/story-details/StoryDetails.jsx'
-import HomePage from './pages/home-page/HomePage.jsx'
-import StoryIndex from './pages/story-index/StoryIndex.jsx'
-import StoryVars from './pages/story-details/StoryVars.jsx'
-import StoryChars from './pages/story-details/StoryChars.jsx'
-import StoryItems from './pages/story-details/StoryItems.jsx'
-import SceneEditor from './pages/scene-editor/SceneEditor.jsx'
+import StoryDetails from './pages/StoryDetails.jsx'
+import HomePage from './pages/HomePage.jsx'
+import StoryIndex from './pages/StoryIndex.jsx'
+import StoryVars from './pages/StoryVars.jsx'
+import StoryChars from './pages/StoryChars.jsx'
+import StoryItems from './pages/StoryItems.jsx'
+import SceneEditor from './pages/SceneEditor.jsx'
 import NotFoundPage from './pages/NotFoundPage.jsx'
+import StorySummary from './pages/StorySummary.jsx'
 
 function App() {
 
@@ -21,8 +22,9 @@ function App() {
             <Route element={<HomePage />} path="/" />
               <Route path="/story/dashboard/:folder?" element={<StoryIndex />} />
               <Route path="/story/:storyId" element={<StoryDetails />} >
+                <Route path="/story/:storyId/summary" element={<StorySummary />} />
                 <Route path="/story/:storyId/characters" element={<StoryChars />} />
-                <Route path="/story/:storyId/vars" element={<StoryVars />} />
+                <Route path="/story/:storyId/variables" element={<StoryVars />} />
                 <Route path="/story/:storyId/items" element={<StoryItems />} />
                 <Route path="/story/:storyId/scene/:scene" element={<SceneEditor />} />
 

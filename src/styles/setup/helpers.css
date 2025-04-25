@@ -1,28 +1,51 @@
-/* flex helpers */
-
+/* FLEX */
 
 .flex {
     display: flex;
 }
 
-
 .align-center {
     align-items: center;
 }
 
+.flex-column {
+    flex-direction: column;
+}
 
 .space-between {
     justify-content: space-between;
 }
 
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+/* GRID */
 
+.grid {
+    display: grid;
+}
 
-/* list helpers */
+.grid-center {
+    display: grid;
+    place-content: center;
+}
 
+/* LIST */
 
 .clean-list {
     margin: 0;
     padding: 0;
     list-style-type: none;
+}
+
+/* POSITIONS */
+
+.sticky {
+    position: sticky;
+}
+.abs {
+    position: absolute;
 }

@@ -1,6 +1,24 @@
 .main-header {
+    box-shadow: 0 0 2px var(--dark-sepia);
+    /* box-shadow: 0 0 2px rgba(0,0,0,0.2); */
+    /* background-color: #fff; */
 
     .logo {
-        width: 40px;
     }
 }
+
+.main-header {
+    /* background-color: var(--forest-green); */
+    background: linear-gradient(135deg, var(--sage-green), var(--forest-green));
+    color: var(--parchment-beige);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    padding: 16px;
+    height: 48px;
+    .logo  {
+      /* fill: var(--gold-accent); */
+      filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.3));
+      width: 50px;
+
+    }
+  }

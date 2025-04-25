@@ -1,13 +1,16 @@
 /* SETUP */
 @import url('./setup/vars.css');
-@import url('./setup/vars.css');
+@import url('./setup/helpers.css');
 @import url('./setup/base.css');
 @import url('./setup/reset.css');
-@import url('./setup/mq.css');
-@import url('./setup/typography.css');
+/* @import url('./setup/mq.css'); */
+/* @import url('./setup/typography.css'); */
 @import url('./setup/layout.css');
 
 /* CMPS */
+@import url('./cmps/story-details-sidebar.css');
+@import url('./cmps/main-header.css');
+
+/* PAGES */
 @import url('./pages/story-index.css');
 @import url('./pages/home-page.css');
-@import url('./cmps/main-header.css');

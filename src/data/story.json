@@ -1,0 +1,19 @@
+[
+    {
+        "_id": "101",
+        "title": "My Story Title",
+        "description": "My story description",
+        "thumbnailUrl": "https://marketplace.canva.com/EAFOYxZhUbU/1/0/1600w/canva-black-red-horror-stories-youtube-thumbnail-CCjIPIyyoZ8.jpg",
+        "createdAt": 1745252968849,
+        "updatedAt": 1745252968849,
+        "createdBy": {
+            "_id":"101",
+            "imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png",
+            "name":"Moshe Samuel"
+        },
+        "members":[
+
+        ],
+        "scenes":[]
+    }
+]

@@ -5,12 +5,25 @@ body {
     color: var(--dark-sepia);
   }
   
-  button {
+  
+  button.primary {
     background-color: var(--forest-green);
     color: var(--parchment-beige);
+    border: 1px solid var(--neutral-gray);
+    border-radius: 4px;
+    padding: 8px 16px;
+    transition: background-color 0.2s;
+  }
+  button.primary:hover {
+    background-color: var(--sage-green);
+  }
+  button.secondary {
+    background-color: var(--muted-beige);
+    color: var(--dark-sepia);
     border: 1px solid var(--rich-brown);
   }
-  
-  button:hover {
-    background-color: var(--olive-green);
+  button.accent {
+    background-color: var(--amber-accent);
+    color: var(--dark-sepia);
+    border: none;
   }

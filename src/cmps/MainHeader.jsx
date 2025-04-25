@@ -4,9 +4,10 @@ const MainHeader = () => {
 
 
     return (
-        <header className="main-header">
+        <header className="main-header main-layout-header flex align-center space-between">
 
-            <GIcon className="logo" iconName="Logo" />
+            {/* <GIcon className="logo" iconName="Logo" /> */}
+            <h1>Poetica</h1>
             <p>main header</p>
         </header>
     )

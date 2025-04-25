@@ -3,79 +3,68 @@ import { storageService } from '../async-storage.service'
 import { makeId } from '../util.service'
 import { userService } from '../user'
 
-const STORAGE_KEY = 'wb'
+const STORAGE_KEY = 'story'
 
-export const wbService = {
+export const storyService = {
     query,
     getById,
     save,
     remove,
-    addWbMsg
+    addstoryMsg
 }
-window.cs = wbService
+window.cs = storyService
 // TODO: Implement functions
 // BUG: sortField and sortDir are not used
 
 
 async function query(filterBy = {txt:'' }) {
-    var wbs = await storageService.query(STORAGE_KEY)
+    var storys = await storageService.query(STORAGE_KEY)
     const { txt} = filterBy
 
     if (txt) {
         const regex = new RegExp(filterBy.txt, 'i')
-        wbs = wbs.filter(wb => regex.test(wb.vendor) || regex.test(wb.description))
+        storys = storys.filter(story => regex.test(story.vendor) || regex.test(story.description))
     }
     
-    return wbs
+    return storys
 }
 
-// async function createWb() {
+// async function createstory() {
 
 // }
 
-function getById(wbId) {
-    return storageService.get(STORAGE_KEY, wbId)
+function getById(storyId) {
+    return storageService.get(STORAGE_KEY, storyId)
 }
 
-async function remove(wbId) {
+async function remove(storyId) {
     // throw new Error('Nope')
-    await storageService.remove(STORAGE_KEY, wbId)
+    await storageService.remove(STORAGE_KEY, storyId)
 }
 
-async function save(wb) {
-    var savedWb
-    if (wb._id) {
-        // const wbToSave = {
-        //     _id: wb._id,
-        //     price: wb.price,
-        //     speed: wb.speed,
-        // }
-        savedWb = await storageService.put(STORAGE_KEY, wb)
+async function save(story) {
+    var savedstory
+    if (story._id) {
+      
+        savedstory = await storageService.put(STORAGE_KEY, story)
     } else {
-        // const wbToSave = {
-        //     vendor: wb.vendor,
-        //     price: wb.price,
-        //     speed: wb.speed,
-        //     // Later, owner is set by the backend
-        //     owner: userService.getLoggedInUser() || 'Moishe',
-        //     msgs: []
-        // }
-        savedWb = await storageService.post(STORAGE_KEY, wb)
+        
+        savedstory = await storageService.post(STORAGE_KEY, story)
     }
-    return savedWb
+    return savedstory
 }
 
-async function addWbMsg(wbId, txt) {
+async function addstoryMsg(storyId, txt) {
     // Later, this is all done by the backend
-    const wb = await getById(wbId)
+    const story = await getById(storyId)
 
     const msg = {
         id: makeId(),
         by: userService.getLoggedInUser(),
         txt
     }
-    wb.msgs.push(msg)
-    await storageService.put(STORAGE_KEY, wb)
+    story.msgs.push(msg)
+    await storageService.put(STORAGE_KEY, story)
 
     return msg
 }
